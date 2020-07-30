@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelle löschen</title>
+</head>
+
+<body onload="myFunction()">
+<script>
+    function deleteElement(node)
+    {
+        document.getElementsByTagName("tbody")[0].
+        removeChild(node.parentNode.parentNode);
+    }
+    function myFunction() {
+        var table = document.getElementById("myTable");
+        var trList = document.getElementsByTagName("tr");
+
+        for(var i=1; i<trList.length; i++)
+        {
+            //Erstelle
+            var deleteLinkNode = document.createElement
+            ("a");
+            deleteLinkNode.setAttribute("href", "#");
+            deleteLinkNode.setAttribute("onclick", 	"deleteElement(this)");
+            deleteLinkNode.appendChild(document.createTextNode("Delete"));
+            var deleteLinkColumn = 	document.createElement("td");
+            deleteLinkColumn.appendChild(deleteLinkNode);
+            trList[i].appendChild(deleteLinkColumn);
+        }
+    }
+</script>
+<table id="myTable" border="1">
+    <tr> <td> Name </td> </tr>
+    <tr> <td> Michael </td> </tr>
+    <tr> <td> Fredu</td> </tr>
+</table>
+
+</body>
+</html>

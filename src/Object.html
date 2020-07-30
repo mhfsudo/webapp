@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+
+<pre>
+    <script>
+
+        var person1 = {firstName: "Lisa", lastName: "Steinegger", age: 29};
+        alert(person1.firstName); //output Lisa
+
+        var person2 = new Object();
+        person2.firstName = "Michael";
+        person2.lastName = "Friderich";
+        person2.age = 30;
+        alert(person2.age); //output 30
+
+        var person3 = {
+            firstName: "Andri",
+            lastName : "Wild",
+            age     : 29,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        alert(person3.fullName()); //output Andri Wild
+
+    </script>
+</pre>
+
+</body>
+</html>

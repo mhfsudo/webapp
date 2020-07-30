@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eingabe</title>
+</head>
+<body>
+
+<form id="form1" onsubmit="getFormvalue();return false;">
+    First name: <input type="text" name="fname" value="Michael"><br>
+    <input type="submit" value="Submit">
+</form>
+<p id="firstname"> </p>
+
+<script>
+    function getFormvalue()
+    {
+        var inputFields = document.getElementsByTagName("input");
+        var length = inputFields.length;
+        var firstname = document.getElementById("firstname");
+        var lastname = document.getElementById("lastname");
+        for(let i=0; i<length; i++)
+        {
+            let input = inputFields[i];
+            if(input.getAttribute("type") === "text" && input.getAttribute("name") === "fname")
+            {
+                firstname.innerHTML = input.value;
+            }
+            else if(input.getAttribute("type") ===	"text" && input.getAttribute("name") === "lname")
+            {
+                lastname.innerHTML = input.value;
+            }
+        }
+        return false;
+    }
+</script>
+
+</body>
+</html>

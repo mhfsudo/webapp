@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamische Liste</title>
+</head>
+<body>
+
+//Dynamische Liste
+<ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+</ul>
+
+<script>
+    function myFunction() {
+        var node = document.createElement("LI");
+        var value = 	document.getElementById("myText").value;
+
+        var textnode = document.createTextNode(value);
+        node.appendChild(textnode);
+        document.getElementById("myList").appendChild(	node);
+    }
+</script>
+
+<input type="text" name="value" value="value" 	id="myText"/>
+<button onclick="myFunction()"> Add </button>
+
+//Elemente zählen
+<script>
+    var li = document.getElementsByTagName("li");
+    var numberOfLi = li.length;
+    document.write("Es gibt " + numberOfLi + " li-Elemente");
+</script>
+
+</body>
+</html>

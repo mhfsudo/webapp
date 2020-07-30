@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hintergrundfarbe ändern</title>
+</head>
+<body>
+
+<input type="button" value="Click to set paragraph background color" onclick="set_background()">
+<p>Michael Friderich</p>
+
+<script>
+    function set_background() {
+        var paragraphs = 	document.getElementsByTagName("p");
+        for(let i = 0; i<paragraphs.length; i++) {
+            let p = paragraphs[i];
+            //p.style.background = "red";
+            p.setAttribute("style","background:red");
+        }
+    }
+</script>
+
+</body>
+</html>

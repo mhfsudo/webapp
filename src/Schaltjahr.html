@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schaltjahr</title>
+</head>
+<body>
+
+<script>
+const isLeapYear = year =>
+{
+    if ((year % 4 === 0) && (year % 100 != 0) || (year % 400 === 0))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+};
+</script>
+
+</body>
+</html>

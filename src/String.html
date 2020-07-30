@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+</head>
+<body>
+
+<pre>
+    <script>
+
+        var name1 = "Michael";
+        var name2 = "Lisa";
+
+        document.writeln(name1);                                //output Michael
+        document.writeln(name1.toLowerCase());                  //output michael
+        document.writeln(name1.toUpperCase());                  //output MICHAEL
+        document.writeln(typeof name1);                         //output string
+        document.writeln(name1.concat(name2));                  //output MichaelLisa
+        document.writeln(name1.slice(1, 4));                    //output ich
+        document.writeln(name1.substr(2));                      //output chael
+        document.writeln(name1.replace("Michael", "Andri"));    //output Andri
+
+        //String umkehren
+        function reverseString(str) {
+            return str.split("").reverse().join("");
+        }
+
+        var str = reverseString("Michael");
+        document.writeln(str);                                  //output leachiM
+
+    </script>
+</pre>
+
+</body>
+</html>

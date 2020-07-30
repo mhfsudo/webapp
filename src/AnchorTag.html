@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anchor Tag Eigenschaften</title>
+</head>
+<body>
+
+<p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="http://www.w3resource.com/">w3resource</a></p>
+<button onclick="getAttributes()">Click here to get  attributes value</button>
+
+<script>
+    function getAttributes()
+    {
+        var anchor = document.getElementById("w3r");
+        var attributes = anchor.attributes;
+        for(let i=0; i<attributes.length;i++)
+        {
+            let attribute = attributes[i];
+            document.write(attribute.name + ": " + attribute.value);
+        }
+    }
+</script>
+
+</body>
+</html>

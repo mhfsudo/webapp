@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text eingaben</title>
+</head>
+<body>
+
+<div id="our-Div"></div>
+
+<script>
+var ourDiv = document.getElementById("our-Div");
+var newParagraph = document.createElement("p");
+var copy = document.createTextNode("Hello World");
+
+newParagraph.appendChild(copy);
+ourDiv.appendChild(newParagraph);
+</script>
+
+</body>
+</html>

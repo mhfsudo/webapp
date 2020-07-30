@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor</title>
+</head>
+<body>
+
+<pre>
+    <script>
+
+        //Constructor
+        function Person(firstName, age) {
+            this.firstName = firstName;
+            this.age = age;
+        }
+
+        var person1 = new Person("Lisa", 29);
+        var person2 = new Person("Michael", 30);
+
+        alert(person1.firstName);                       //output Lisa
+        alert(person2.firstName + " " + person2.age);   //output Michael 30
+
+    </script>
+</pre>
+
+</body>
+</html>

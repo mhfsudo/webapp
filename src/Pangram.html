@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pangram</title>
+</head>
+<body>
+
+<script>
+document.writeln(isPangram("Hello"));
+document.writeln(isPangram("Bei jedem klugen Wort von Sokrates rief Xanthippe zynisch: Quatsch!"));
+
+function isPangram(str)
+{
+var letters = "abcdefghijklmnopqrstuvwxyz";
+
+for (var i = 0; i < 26; i++)
+    {
+        if (str.indexOf(letters[i]) < 0)
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+}
+</script>
+
+</body>
+</html>

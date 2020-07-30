@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+
+<pre>
+<script>
+
+    //Create EmptyArray with ArrayLength of 3
+    var emptyArray = new Array(3);
+
+    //Create Array with Values
+    var myArray = [5, "five", "5"];
+
+    myArray[3] = "fünf";                        //add Element
+    document.writeln(myArray);                  //output 5, five, 5, fünf
+    document.writeln(myArray[1]);               //output five
+    document.writeln(myArray.length);           //output 4
+    document.writeln(myArray.reverse());        //output fünf, 5, five, 5
+    document.writeln(myArray.sort());           //output 5, 5, five, fünf
+
+    //Array Durschnitt ausgeben
+    var myNumberArray = [1, 2, 3, 4];
+    arrayAverage(myNumberArray);                //output 2.5
+
+    function arrayAverage(numbers)
+    {
+        var average = numbers[0];
+        for(i = 1; i < numbers.length; i++)
+        {
+            average += numbers[i];
+        }
+        document.writeln(average / numbers.length);
+    }
+
+    //Aray höchster Wert ausgeben
+    arrayHighestValue(myNumberArray);           //output 4
+
+    function arrayHighestValue(numbers)
+    {
+        var array = numbers;
+        var largest = 0;
+        for (i = 1; i < array.length; i++)
+        {
+            if(array[i] > largest)
+            {
+                largest = array[i];
+            }
+        }
+        document.writeln(largest);
+    }
+
+    //Aray längster Sring
+    var myStringArray = ["Aston Martin", "Tesla"]
+    longestWord(myStringArray);             //output Aston Martin
+
+    function longestWord(strings)
+    {
+        var longest = strings[0];
+        for(i = 0; i < strings.length; i++)
+        {
+            if(strings[i].length > longest.length)
+            {
+                longest = strings[i]
+            }
+        }
+        document.writeln(longest);
+    }
+
+</script>
+</pre>
+
+</body>
+</html>

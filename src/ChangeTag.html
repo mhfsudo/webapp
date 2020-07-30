@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tag ändern</title>
+</head>
+<body>
+
+<h1 id="title">h1 Title</h1>
+<p id="paragraph"></p>
+
+<script>
+    var h1 = document.getElementById("title");
+    var p = document.getElementById("paragraph");
+    p.innerHTML = h1.innerHTML;
+    p.innerHTML = "not longer h1";
+</script>
+
+</body>
+</html>

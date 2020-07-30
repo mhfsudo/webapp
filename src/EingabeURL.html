@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL einfügen</title>
+</head>
+<body>
+
+<button onclick="myFunction()">Try it</button>
+<p id="test"></p>
+
+<script>
+    function myFunction()
+    {
+        var person = prompt("Please enter your name", " https://www.google.ch");
+        if (person != null)
+        {
+            var result = person.link(person);
+            document.getElementById("test").innerHTML = result;
+        }
+    }
+</script>
+
+</body>
+</html>
