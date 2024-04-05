@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<contactlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aufgabe3.xsd">
+    <contact jobtitle="CEO" tel="0797126690"></contact>
+    <contact jobtitle="CTO" tel="0797126690"></contact>
+</contactlist>

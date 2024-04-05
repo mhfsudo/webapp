@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<lists>
+    <imageList>
+        <img src="large.jpg" alt="grosses Bild"></img>
+        <img src="small.jpg" alt="mein's"></img>
+    </imageList>
+
+    <siteList>
+        <page>www.fachhochschule.ch</page>
+        <page type="alias">www.ffhs.ch</page>
+        <moodle><page>moodle.ffhs.ch</page></moodle>
+    </siteList>
+</lists>
+
+<!--Aufgabe 1
+<?xml version="1.0"?>
+<imagelist>
+    <img src="large.jpg" alt='grosses Bild'>     // slash / fehlt (leeres Element)
+    <img src='small.jpg' alt="mein's">           // slash / fehlt (leeres Element)
+</imagelist>
+
+<SiteList>                                       // nur ein Wurzelelement erlaubt (Root Element)
+    <page>www.fernfachhochschule.ch</page>
+    <page type="alias'>www.ffhs.ch</page>        // verschiedene Quotes " '
+    <moodle><page>moodle.ffhs.ch</moodle></page> // verschachtelung nicht korrekt
+</Sitelist>                                      // ungleich start tag
+-->
+
