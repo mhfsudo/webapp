@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ausgabe</title>
+</head>
+<body>
+
+<script>
+document.writeln(printTitle('[{"title": "name1"}]'));
+
+function printTitle(jsonStr)
+{
+    var jsonText = JSON.parse(jsonStr);
+    return jsonText[0].title;    //output name1
+}
+</script>
+
+</body>
+</html>

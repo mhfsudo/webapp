@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON JS</title>
+</head>
+<body>
+
+<script>
+//JSON -> JS
+var toDoDaten;
+
+function leseToDoDaten(text)            //Daten in Text speichern
+{
+    var jsonObject = JSON.parse(text);
+    toDoDaten = jsonObject;
+}
+
+//JS -> JSON
+var toDoDaten;
+
+function schreibeToDoDaten()            //Daten aus Text laden
+{
+    var str = JSON.stringify(todoDaten);
+    return str;
+}
+</script>
+
+</body>
+</html>
