@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R2-D2</title>
+</head>
+<body>
+
+
+Wie heissen die Titel der Filme in welchen R2-D2 mitspielt?
+
+
+<h1 id="schauspieler"></h1>
+<ul id="films"></ul>
+<script>
+    var url = 'https://swapi.co/api/people/';
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', url, true);
+    xhttp.onreadystatechange = function () {
+        if(xhttp.readyState == 4 && xhttp.status == 200) {
+            var daten = JSON.parse(xhttp.responseText);
+            auslesen(daten);
+        }
+    }
+    xhttp.send();
+    function auslesen(daten) {
+        var schauspieler = document.getElementById('schauspieler');
+        // console.log(daten);
+        var nameArray = daten.results;
+        for (let iname in nameArray) {
+            // console.log(nameArray[iname].name);
+            if(nameArray[iname].name == 'R2-D2') {
+                // console.log(nameArray[iname].name);
+                schauspieler.innerHTML = nameArray[iname].name;
+                for (var x = 0; x < nameArray[iname].films.length; x++) {
+                    var filmsurl = nameArray[iname].films[x];
+                    console.log(filmsurl);
+                    var xhttpfilms = new XMLHttpRequest();
+                    xhttpfilms.open('GET', filmsurl, true);
+                    xhttpfilms.onreadystatechange = function () {
+                        if(xhttpfilms.readyState == 4 && xhttpfilms.status == 200) {
+                            var datenfilms = JSON.parse(xhttpfilms.responseText);
+                            // console.log(datenfilms);
+                            auslesenfilms(datenfilms);
+                        }
+                    }
+                    xhttpfilms.send();
+                }
+            }
+        }
+    }
+    function auslesenfilms(datenfilms) {
+        // console.log(datenfilms);
+        var ul = document.getElementById('films');
+        // console.log(datenfilms.title);
+        var li = document.createElement('li');
+        li.innerHTML = datenfilms.title;
+        ul.appendChild(li);
+    }
+</script>
+</body>
+</html>
