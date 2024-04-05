@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <!-- Ihre Lösung hier -->
+    <xsd:element name="School">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Departments" type="Departments" maxOccurs="unbounded" minOccurs="1"/>
+                <xsd:element name="Modules" type="Modules" maxOccurs="unbounded" minOccurs="1"/>
+                <xsd:element name="Lecturers" type="Lecturers" maxOccurs="unbounded" minOccurs="1"/>
+                <xsd:element name="Students" type="Students" maxOccurs="unbounded" minOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Departments">
+        <xsd:sequence>
+            <xsd:element name="Department1">
+                <xsd:complexType>
+                    <xsd:attribute name="id" type="xsd:string" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Department2">
+                <xsd:complexType>
+                    <xsd:attribute name="id" type="xsd:string" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Modules">
+        <xsd:sequence>
+            <xsd:element name="Module1">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="ModuleName" type="xsd:string"/>
+                    </xsd:choice>
+                    <xsd:attribute name="code" type="xsd:string"/>
+                    <xsd:attribute name="departments" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Module2">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="ModuleName" type="xsd:string"/>
+                    </xsd:choice>
+                    <xsd:attribute name="code" type="xsd:string"/>
+                    <xsd:attribute name="departments" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Module3">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="ModuleName" type="xsd:string"/>
+                    </xsd:choice>
+                    <xsd:attribute name="code" type="xsd:string"/>
+                    <xsd:attribute name="departments" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Lecturers">
+        <xsd:sequence>
+            <xsd:element name="Lecturer">
+                <xsd:complexType>
+                    <xsd:group ref="Person"/>
+                    <xsd:attribute name="gender" type="xsd:string"/>
+                    <xsd:attribute name="modules" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Students">
+        <xsd:sequence>
+            <xsd:element name="Student1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:group ref="Person"/>
+                        <xsd:element ref="Exams"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="gender" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Student2">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:group ref="Person"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="gender" type="xsd:string"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="Exams">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Exam1">
+                    <xsd:complexType>
+                        <xsd:attribute name="module" type="xsd:string"/>
+                        <xsd:attribute name="date" type="xsd:date"/>
+                        <xsd:attribute name="grade" type="xsd:int"/>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Exam2">
+                    <xsd:complexType>
+                        <xsd:attribute name="module" type="xsd:string"/>
+                        <xsd:attribute name="date" type="xsd:date"/>
+                        <xsd:attribute name="grade" type="xsd:int"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:group name="Person">
+        <xsd:sequence>
+            <xsd:element name="LastName" type="xsd:string"/>
+            <xsd:element name="FirstName" type="xsd:string"/>
+            <xsd:element name="Street" type="xsd:string"/>
+            <xsd:element name="ZIP" type="xsd:int"/>
+            <xsd:element name="City" type="xsd:string"/>
+            <xsd:element name="AHVNumber" type="xsd:string"/>
+            <xsd:element name="BirthDate" type="xsd:date"/>
+        </xsd:sequence>
+    </xsd:group>
+</xsd:schema>

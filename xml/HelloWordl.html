@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML File-->
+<!--XSD Schema einbinden (Prolog) Wurzelelement (<text>)-->
+<text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="HelloWorld.xsd">
+    Hello World
+</text>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XSD File-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="text" 	type="xsd:string"></xsd:element>
+</xsd:schema>
+
+</body>
+</html>
