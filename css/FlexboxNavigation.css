@@ -1,0 +1,38 @@
+/* Original CSS*/
+/* base styles */
+body {
+    background-color: #fcfcfc;
+    color: #666;
+    font-size:14px;
+}
+/* disabling bullets */
+nav > ul > li {
+    list-style: none;
+}
+.search-box {
+    max-width: 70px;
+}
+.search-icon {
+    border: 1px solid #666;
+    padding: 0 5px;
+    background-color: #eee;
+}
+/**
+ * Updated CSS
+ */
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .search {
+    display:flex;
+}
+nav .search-title {
+    align-self: center;
+    padding-right: 5px;
+}
+nav .fa-times.search-icon {
+    display:flex;
+    align-items: center;
+}
