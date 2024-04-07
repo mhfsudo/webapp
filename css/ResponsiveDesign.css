@@ -1,0 +1,10 @@
+.stack {
+    width: 500px;
+    max-width: 90%;
+    margin: 0, auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    width: 300px;
+    margin: 25px;
+    float: left;
+}

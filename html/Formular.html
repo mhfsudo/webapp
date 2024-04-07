@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formular</title>
+</head>
+<body>
+
+<form>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required>
+    <!--Requiered = nur submit wenn korrekte Werteingabe erfolgt-->
+
+    <br><label for="email">E-Mail</label>
+    <input type="email" name="email" id="email" required>
+
+    <br> <label for="date">Datum</label>
+    <input type="date" name="date" id="date">
+
+    <br> <label for="numbers">Anzahl</label>
+    <input type="number" name="numbers" id="numbers" 	min="1">
+
+    <br> <label for="location">Ort</label>
+    <select name="location" id="location">
+        <option value="0" 	selected="selected">Bern</option>
+        <option value="1">Zürich</option>
+    </select><br>
+
+    <br><input type="submit" value="Speichern" 	onclick="alert('Gespeichert')">
+</form>
+
+</body>
+</html>

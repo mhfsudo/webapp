@@ -1,0 +1,25 @@
+* {
+    font-family: Arial;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+}
+
+p {
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+}
+
+.intro {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+
+}
+
+ul {
+    list-style-type: lower-roman;
+}
+

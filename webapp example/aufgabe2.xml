@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE person SYSTEM "aufgabe2.dtd">
+<person>
+    <anrede>Herr</anrede>
+    <titel>Professor</titel>
+    <nachname>Meier</nachname>
+</person>
+
+<!--Aufgabe 2
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> // standalone gelöscht
+<DOCTYPE person SYSTEM "aufgabe2.dtd">
+<person>
+    <titel>Professor</titel>                            // anrede eingefügt
+    <titel>Doktor</titel>                               // titel gelöscht da sonst Konflikt
+    <nachname>Meier</nachname>
+</person>
+-->

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3c//DTD HTML 4.01//EN">
+<head>
+    <meta charset="UTF-8">
+    <title>aufgabe7</title>
+</head>
+<body>
+
+<input type="button" value="start" onclick="fillTableColor()">
+
+<table>
+    <tr>
+        <th>Zeile</th><th>Farbe</th>
+    </tr>
+    <tr>
+        <td>1</td><td>keine</td>
+    </tr>
+    <tr>
+        <td>2</td><td>helles grün</td>
+    </tr>
+    <tr>
+        <td>3</td><td>keine</td>
+    </tr>
+    <tr>
+        <td>4</td><td>helles grün</td>
+    </tr>
+</table>
+
+</body>
+
+<script>
+
+    function fillTableColor() {
+        var rows = document.getElementsByTagName("tr");
+
+        for(var i = 2; i < rows.length; i += 2){
+            rows[i].style.backgroundColor = "green";
+        }
+    }
+
+</script>
+
+</html>

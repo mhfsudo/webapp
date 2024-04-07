@@ -1,0 +1,9 @@
+nav {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}

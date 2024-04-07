@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<scool>
+    <books:books xmlns:books="http://books.com">
+        <books:book>
+            <books:title>XML</books:title>
+        </books:book>
+    </books:books>
+
+    <university:professors xmlns:university="https://university.com" >
+        <university:professor>
+            <university:name>Michael</university:name>
+            <university:title>Dr.Ing.</university:title>
+        </university:professor>
+    </university:professors>
+</scool>

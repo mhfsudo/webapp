@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<ul id="spaceships">
+</ul>
+
+<script>
+    function showStarShips(){
+        loadDoc('https://swapi.co/api/starships/',searchStarships)
+    }
+    function loadDoc(url, cFunction) {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                cFunction(this);
+            }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
+    function searchStarships(xhttp) {
+        var starshipsResponse = JSON.parse(xhttp.responseText);
+        var starshipsArray = starshipsResponse.results;
+        var ul = document.getElementById('spaceships');
+        for (let starship in starshipsArray) {
+            console.log(starshipsArray[starship].name);
+            if (starshipsArray[starship].max_atmosphering_speed > 1000
+                && starshipsArray[starship].passengers > 2) {
+                var li = document.createElement('li');
+                li.innerHTML = starshipsArray[starship].name;
+                ul.appendChild(li);
+            }
+        }
+    }
+    showStarShips();
+</script>
+</html>

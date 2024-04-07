@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books xsd:noNamespaceSchemaLocation="books.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- Ihre Lösung hier -->
+    <book type="Fiction">
+        <title>The Handmaid's Tale</title>
+        <author>
+            <firstname>Margaret</firstname>
+            <lastname>Atwood</lastname>
+        </author>
+        <price currency="CHF">17.90</price>
+    </book>
+    <book type="Fiction">
+        <title>Uncle Tom's Cabin</title>
+        <author>
+            <name>Harriet Beecher Stowe</name>
+        </author>
+        <price currency="GBP">9.99</price>
+    </book>
+    <book type="Fiction">
+        <title>Pride and Prejudice</title>
+        <author>
+            <firstname>Jane</firstname>
+            <lastname>Austen</lastname>
+        </author>
+        <price currency="USD">5.95</price>
+    </book>
+    <book type="Fiction">
+        <title>The girl who saved the king of Sweden</title>
+        <author>
+            <firstname>Jonas</firstname>
+            <lastname>Jonasson</lastname>
+        </author>
+        <price currency="EUR">15.99</price>
+    </book>
+</books>

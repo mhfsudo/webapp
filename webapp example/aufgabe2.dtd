@@ -1,0 +1,6 @@
+<!ELEMENT person (anrede,titel?,vorname*,nachname)>
+<!ELEMENT anrede (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT nachname (#PCDATA)>
+<!ELEMENT person id ID #IMPLIED>
